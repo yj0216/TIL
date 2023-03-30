@@ -66,11 +66,23 @@ object: player.name
 ```
 className같은 경우 Element에 모든 클래스를 끌고 오지만 classList는 특정 class만을 지정 할 수 있음.
 ```
-## 배운 명령어(중요하다고 생각 하는 것들)
+## API 사용
+```
+api 값을 변수에 집어 넣음 -> fetch 함수 를 통해 데이터 값 요청 성공시 then 으로 값을 보냄 이후 then 내부에 function을 통해 데이터 가공
+```
+## 배운 명령어들
 ```
 document.querySelector("Element"); = css처럼 특정 요소를 지정하여 접근 할 수 있음.
 Element.addEventListner("event",function) = 지정한 이벤트를 하면 함수 실행.
 Element.classList.toggle("classname"); = 지정한 클래스가 있으면 없에주고 없으면 생성해줌.
-document.createElement("Element") 지정된 이름의 html 요소를 만들어 반환
-Node.appendChild("Node") 노드 밑에 지정한 자식 노드 추가
+document.createElement("Element"); = 지정된 이름의 html 요소를 만들어 반환
+Node.appendChild("Node"); = 노드 밑에 지정한 자식 노드 추가  
+Event.preventDefault(); = 이벤트를 멈춰줌(submit같은 새로고침 하는 이벤트에 주로 사용)
+Object.filter(function); = Object안에 있는 내용물을 function을 작동 시켜서 Object안에 있는 내용들을 걸러낸 새로운 배열 생성
+Json.parse(Object); = Object 안에 있는 내용물을 String으로 바꿈
+String(date.getMinutes()).padStart(Num,String); = Num 만큼 자릿수가 맞지 않다면 String 으로 채움  
+setInterval(function,delay); = delay 마다 function을 실행 시킴
+Math.floor(float) = 소수점 밑에 숫자들을 내림하다 
+Math.random() = 랜덤한 1 미만에 소수들을 출력
+navigator.geolocation.getCurrentPosition(ok,error); 현재 위치 정보를 얻음 성공시 ok function을 작동시키고 실패시 error function을 작동 시킨다
 ```
