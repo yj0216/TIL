@@ -1,5 +1,5 @@
 # 리엑트를 활용하여 crud 만들기
-## [코드](https://github.com/yj0216/nest-react)
+## [코드](https://github.com/yj0216/react-gathering/tree/main/wanted-pre-onboarding-frontend)
 
 ***
 ## 하게 된 이유
