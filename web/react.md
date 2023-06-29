@@ -71,6 +71,31 @@ js 환경을 최대로 활용 할 수 있음
 글로벌 네이밍을 신경쓰지 않아도 됨  
 기존 css보다 편의성과 확장성이 높음 (props를 전달받아 css 속성값으로 활용)  
   
+#  리덕스
+
+상태값을, component 에 종속시키지 않고, 상태 관리를 component 바깥에서 관리 하는 것
+
+redux 를 적용할 시 스토어가 생김 스토어 안에는 프로젝트 상태에 관한 데이터가 있음
+
+작동 방식
+
+component 가 store에 접근
+이후 state 값이 변경될 시 dispatch()가 상태를 변경해 달라고 Store에 요청(dispatch() 내부에는 액션을 반드시 담아야함) 
+action 함수에는 type, payload 등을 담음
+값을 전달 받은 Store는 Store 내부 Reducer 함수를 통해 상태를 변경함.
+Reducer는 변경 전 상태와 action 객체를 인자로 받고 새로운 상태를 뱉음.
+Store는 변경된 상태를 받아 기존 상태를 변경된 상태로 갈아 끼움  
+상태변경이 끝나면 상태변경을 요청한 컴포넌트에 상태가 변경되었음을 알림.
+해당 컴포넌트 리렌더링.
+
+combineReducers 리덕스 합치기
+connect(mapStateToProps, mapDispatchToProps)(TodosContainer) component 연결 하고 상태 확인
+useSelector() 상태 변경 확인
+createAction 액션 생성
+handleActions 액션에 따라 함수 호출
+
+리액트 프로젝트에서 리덕스를 사용하면 업데이트에 관련된 로직을 리액트 컴포넌트에서 완벽하게 분리시킬 수 있으므로 유지 보수성이 높은 코드를 작성해 낼 수 있다.
+규모가 큰 프로젝트에 리덕스를 적용하면 상태를 더 체계적으로 관리할 수 있다.
 npm create-react-app . 현재 디렉토리에 리엑트 설치    
 npm start 실행    
 npm run build 배포하기 좋은 형태로 파일 변환    
